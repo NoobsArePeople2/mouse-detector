@@ -41,12 +41,13 @@ POST_BUILD_CMDS  = {}
 
 if os.is("macosx") then
 
-  KIND          = "WindowedApp"
+  KIND          = "ConsoleApp"
   FILES         = array_concat(FILES, { "**.mm" })
   DEBUG_LINKS   = {
                     "manymouse",
                     "CoreFoundation.framework",
-                    "AppKit.framework"
+                    "AppKit.framework",
+                    "IOKit.framework"
                   }
   RELEASE_LINKS = DEBUG_LINKS
   INC_DIRS      = array_concat(inc, { "/Users/spmonahan/Dev/libs/bin/include/" })
