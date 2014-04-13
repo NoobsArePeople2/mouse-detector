@@ -63,11 +63,6 @@ elseif os.is("windows") then
   -- FILES
   -- The order is EXTREMELY important
   local links      = {
-                        "sndfile",
-                        "openal32",
-                        "jpeg",
-                        "glew",
-                        "freetype",
                         "ws2_32",
                         "gdi32",
                         "opengl32",
@@ -83,11 +78,13 @@ elseif os.is("windows") then
                       {},
                       links )
 
+  GCC_VERSION      = ""
+
   INC_DIRS         = array_concat(
                       INC_DIRS,
-                      { "src" } )
+                      { "E:/Dev/libs/bin/gcc-4.8.1/include", "src" } )
 
-  LIB_DIRS         = {}
+  LIB_DIRS         = { "E:/Dev/libs/bin/gcc-4.8.1/lib" }
   BUILD_OPTS       = "-std=c++11"
   DEBUG_BUILD_OPTS = "-g"
   --LINK_OPTS

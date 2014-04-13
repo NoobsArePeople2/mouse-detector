@@ -4,3 +4,10 @@
 *.xcworkspace
 build/
 obj/
+
+# CodeBlocks
+*.cbp
+*.depend
+*.exe
+*.layout.save
+*.workspace
